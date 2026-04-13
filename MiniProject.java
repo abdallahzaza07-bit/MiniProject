@@ -63,3 +63,15 @@ class StudentAnalyzer {
 
         return top;
     }
+ // Part d
+    public ArrayList<Student> getTopStudents(int threshold) {
+        ArrayList<Student> result = new ArrayList<Student>();
+
+        for (int i = 0; i < studentList.size(); i++) {
+            if (studentList.get(i).getMarks() >= threshold) {
+                result.add(studentList.get(i));
+            }
+        }
+
+        return result;
+    }
