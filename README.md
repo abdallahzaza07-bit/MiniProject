@@ -16,10 +16,7 @@ Count students above a certain mark
   Check for duplicate names
   Check if marks are sorted
   Count improving pairs
-
-Sample Output:
-(Paste your program output here)
-
+  
 Challenges:
 
  Removing elements from ArrayList without skipping
