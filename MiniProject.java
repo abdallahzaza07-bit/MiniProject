@@ -87,3 +87,27 @@ class StudentAnalyzer {
 
         return false;
     }
+  // Part f
+    public boolean isSorted() {
+        for (int i = 0; i < studentList.size() - 1; i++) {
+            if (studentList.get(i).getMarks() > studentList.get(i + 1).getMarks()) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    // Part g
+    public int countImprovingPairs() {
+        int count = 0;
+
+        for (int i = 1; i < studentList.size(); i++) {
+            if (studentList.get(i).getMarks() > studentList.get(i - 1).getMarks()) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+}
