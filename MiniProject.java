@@ -43,3 +43,11 @@ class StudentAnalyzer {
 
         return count;
     }
+ // Part b
+    public void removeFailing(int passMark) {
+        for (int i = studentList.size() - 1; i >= 0; i--) {
+            if (studentList.get(i).getMarks() < passMark) {
+                studentList.remove(i);
+            }
+        }
+    }
