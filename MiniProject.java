@@ -51,3 +51,15 @@ class StudentAnalyzer {
             }
         }
     }
+ // Part c
+    public Student findTopStudent() {
+        Student top = studentList.get(0);
+
+        for (int i = 1; i < studentList.size(); i++) {
+            if (studentList.get(i).getMarks() > top.getMarks()) {
+                top = studentList.get(i);
+            }
+        }
+
+        return top;
+    }
