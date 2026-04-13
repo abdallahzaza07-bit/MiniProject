@@ -111,3 +111,40 @@ class StudentAnalyzer {
         return count;
     }
 }
+public class MiniProject {
+
+    public static void main(String[] args) {
+
+        ArrayList<Student> list = new ArrayList<Student>();
+
+        list.add(new Student("Ali", 70));
+        list.add(new Student("Sara", 85));
+        list.add(new Student("Omar", 60));
+        list.add(new Student("Lina", 90));
+        list.add(new Student("Ali", 50));
+        list.add(new Student("Maya", 78));
+        list.add(new Student("Zaid", 88));
+        list.add(new Student("Noor", 95));
+        list.add(new Student("Khalid", 40));
+        list.add(new Student("Hana", 82));
+
+        StudentAnalyzer analyzer = new StudentAnalyzer(list);
+
+        System.out.println(analyzer.countAbove(75));
+
+        analyzer.removeFailing(50);
+        System.out.println(list.size());
+
+        Student top = analyzer.findTopStudent();
+        System.out.println(top.getName());
+
+        ArrayList<Student> topStudents = analyzer.getTopStudents(80);
+        System.out.println(topStudents.size());
+
+        System.out.println(analyzer.hasDuplicateNames());
+
+        System.out.println(analyzer.isSorted());
+
+        System.out.println(analyzer.countImprovingPairs());
+    }
+}
